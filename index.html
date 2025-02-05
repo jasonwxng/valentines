@@ -26,6 +26,40 @@
         transform: translateY(-10px);
       }
     }
+
+    #imageDisplay {
+      max-width: 100%;
+      width: 80%;
+      height: auto;
+      margin: 20px auto;
+    }
+    #responseButtons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+      margin: 10px;
+    }
+    #valentineQuestion {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      text-align: center;
+      margin: 20px auto;
+    }
+    @media only screen and (max-width: 600px) {
+      #imageDisplay {
+        display: none;
+      }
+    }
+    @media only screen and (min-width: 1200px) {
+      #valentineQuestion {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body class="gradient-background">
@@ -60,12 +94,12 @@
     let fontSize = 20; // Starting font size in pixels
     const imagePaths = [
       "./images/skidance.gif",
-      "./images/ice.gif",
+      "./images/icep.gif",
       "./images/llama.gif",
-      "./images/basketball.gif",
+      "./images/basketballp.gif",
       "./images/golfp.gif",
-      "./images/santa.gif",
-      "./images/brick.gif"
+      "./images/santap.gif",
+      "./images/brickp.gif"
     ];
 
     noButton.addEventListener('click', function() {
