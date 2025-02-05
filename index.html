@@ -53,21 +53,21 @@
     const imageDisplay = document.getElementById('imageDisplay');
     const valentineQuestion = document.getElementById('valentineQuestion');
     const responseButtons = document.getElementById('responseButtons');
-  
+
     let noClickCount = 0;
     let buttonHeight = 48; // Starting height in pixels
     let buttonWidth = 80;
     let fontSize = 20; // Starting font size in pixels
     const imagePaths = [
-      "./images/image1.gif",
-      "./images/image2.gif",
-      "./images/image3.gif",
-      "./images/image4.gif",
-      "./images/image5.gif",
-      "./images/image6.gif",
-      "./images/image7.gif"
+      "./images/photobooth.gif",
+      "./images/ice.gif",
+      "./images/llama.gif",
+      "./images/basketball.gif",
+      "./images/golf.gif",
+      "./images/santa.gif",
+      "./images/brick.gif"
     ];
-  
+
     noButton.addEventListener('click', function() {
       if (noClickCount < 5) {
         noClickCount++;
@@ -79,17 +79,17 @@
         yesButton.style.width = `${buttonWidth}px`;
         yesButton.style.fontSize = `${fontSize}px`; // Update font size
         if (noClickCount < 6) {
-          noButton.textContent = ["No", "Are you sure?", "Pookie please", "Don't do this to me :(", "You're breaking my heart", "I'm gonna cry..."][noClickCount];
+          noButton.textContent = ["No", "Are you sure?", "bb plz", "DO NOT REDEEM", "press if you hate alcohol", "why u hate me"][noClickCount];
         }
       }
     });
-  
+
     yesButton.addEventListener('click', () => {
-      imageDisplay.src = './images/image7.gif'; // Change to image7.gif
-      valentineQuestion.textContent = "Yayyy!! :3"; // Change the question text
+      imageDisplay.src = './images/skidance.gif'; // Change to image7.gif
+      valentineQuestion.textContent = "Can't wait to have another amazing Valentines Day <3"; // Change the question text
       responseButtons.style.display = 'none'; // Hide both buttons
       confetti(); // Trigger confetti animation
     });
-  </script>  
+  </script>
 </body>
 </html>
