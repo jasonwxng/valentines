@@ -26,47 +26,13 @@
         transform: translateY(-10px);
       }
     }
-
-    #imageDisplay {
-      max-width: 100%;
-      width: 80%;
-      height: auto;
-      margin: 20px auto;
-    }
-    #responseButtons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    button {
-      font-size: 1rem;
-      padding: 10px 20px;
-      margin: 10px;
-    }
-    #valentineQuestion {
-      font-size: 1.5rem;
-      line-height: 1.8;
-      text-align: center;
-      margin: 20px auto;
-    }
-    @media only screen and (max-width: 600px) {
-      #imageDisplay {
-        display: none;
-      }
-    }
-    @media only screen and (min-width: 1200px) {
-      #valentineQuestion {
-        font-size: 2rem;
-      }
-    }
   </style>
 </head>
 <body class="gradient-background">
   <div class="flex items-center justify-center h-screen">
     <div class="flex flex-col items-center p-4">
       <img id="imageDisplay" src="./images/skidance.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
-      <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#1e31bd] my-4">Will you be my Valentine?</h2>
+      <h2 id="valentineQuestion" class="text-2xl font-bold italic text-[#1e31bd] my-4">Will you be my Valentine?</h2>
       <div class="flex gap-4 pt-[20px] items-center" id="responseButtons">
         <button id="yesButton"
           class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[75px] px-4 py-2 bg-green-500 text-white transition">
@@ -106,9 +72,9 @@
       if (noClickCount < 6) {
         noClickCount++;
         imageDisplay.src = imagePaths[noClickCount];
-        buttonHeight += 35; // Increase height by 5px on each click
-        buttonWidth += 35;
-        fontSize += 25; // Increase font size by 1px on each click
+        buttonHeight += 15; // Increase height by 5px on each click
+        buttonWidth += 15;
+        fontSize += 5; // Increase font size by 1px on each click
         yesButton.style.height = `${buttonHeight}px`; // Update button height
         yesButton.style.width = `${buttonWidth}px`;
         yesButton.style.fontSize = `${fontSize}px`; // Update font size
